@@ -21,12 +21,12 @@ export default function HomePage({ events }: { events: Event[] }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/events`);
   const events = await res.json();
 
   return {
     props: { events: events.slice(0, 3) },
-    revalidate: 1,
+    // revalidate: 1,
   };
 }
