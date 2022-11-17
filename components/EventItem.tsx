@@ -10,7 +10,7 @@ export default function EventItem({ evt }: { evt: Event }) {
       <div className={styles.img}>
         <Image
           src={evt.image ? evt.image : "/images/default-train.jpg"}
-          width={150}
+          width={180}
           height={150}
           alt="event-image"
         />
